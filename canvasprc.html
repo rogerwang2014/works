@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#can{box-shadow: 0 0 10px gray; background-color: gray;}
+		</style>
+	</head>
+	<body>
+		<canvas id="can" width="600" height="600"></canvas>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var can = document.getElementById("can");
+		var con = can.getContext("2d");
+		
+		con.beginPath();
+		con.moveTo(20,20);
+		con.lineTo(100,20);
+		con.strokeStyle = "green";
+		con.lineWidth = 10;
+		con.stroke();		
+		
+		con.beginPath();
+		con.arc(200,100,10,0,Math.PI*2,true);
+		con.fillStyle = "white";
+		con.shadowColor = "ghostwhite";
+		con.shadowBlur = 10;
+		
+		con.fill();
+	</script>
+</html>
